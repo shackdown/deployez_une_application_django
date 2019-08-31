@@ -2,6 +2,11 @@ language: python
 python:
   - '3.5'
 
+# safelist
+branches:
+  only:
+    - staging
+
 before_script:
   - pip install -r requirements.txt
 
@@ -12,9 +17,3 @@ services:
 
 script:
   - ./manage.py test
-
-
-  # safelist
-branches:
-  only:
-    - staging
